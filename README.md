@@ -12,5 +12,5 @@ Python: Flask
 As dependências devem ser instaladas via composer (php) e pip (python).
 
 Para a aplicação PHP funcionar, ela deverá ter acesso a uma variável de ambiente chamada `PYTHON_APP_ADDRESS`.
-Essa variável deve conter o endereço web da aplicação Python, assim: `http://python_app.meliuz.com.br`.
+Essa variável deve conter o endereço web da aplicação Python, por exemplo: `http://python_app.meliuz.com.br`.
 
