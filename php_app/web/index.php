@@ -17,4 +17,5 @@ $data = json_decode($response->getBody());
 
 echo "PHP app executing on IP: " . gethostbyname(gethostname()) . "<br>";
 echo "Python app executing on IP: " . $data->ip . "<br>";
-
+echo "<br>";
+echo "Hit counter: " . $data->counter . "<br>";
