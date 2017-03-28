@@ -1,5 +1,16 @@
 version: '3'
 services:
+  php:
+    build: ./php_app
+    command: php -S 0.0.0.0:8000 -t web/
+    depends_on:
+      - python
+    environment:
+      - PYTHON_APP_ADDRESS=http://python:5000
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./php_app:/app
   python:
     build: ./python_app
     command: flask run --host=0.0.0.0
