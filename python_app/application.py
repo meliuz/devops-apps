@@ -4,4 +4,3 @@
 """
 import os
 from web import application
-

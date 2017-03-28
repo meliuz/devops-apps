@@ -1,17 +1,21 @@
 # -*- encoding: utf-8 -*-
-import socket
-
-from flask import Flask, jsonify
 from datetime import datetime
+import os
+import socket
+from flask import Flask, jsonify
+import redis
 
 application = Flask(__name__)
+redis_conn = redis.from_url(os.environ.get('REDIS_URL'))
+
 
 @application.route("/")
 def home():
     local_ip = socket.gethostbyname(socket.gethostname())
-    print "a"
+    redis_conn.incr('API_COUNTER')
+    return jsonify(ip=local_ip, counter=redis_conn.get('API_COUNTER'))
 
-    return jsonify(ip=local_ip)
+
 @application.route("/ping")
 def ping():
     return jsonify(time=datetime.now().isoformat())
@@ -19,4 +23,3 @@ def ping():
 
 if __name__ == "__main__":
     application.run(debug=True)
-
