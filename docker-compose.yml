@@ -1,0 +1,27 @@
+version: '3'
+services:
+  php:
+    build: ./php_app
+    command: php -S 0.0.0.0:8000 -t web/
+    depends_on:
+      - python
+    environment:
+      - PYTHON_APP_ADDRESS=http://python:5000
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./php_app:/app
+  python:
+    build: ./python_app
+    command: flask run --host=0.0.0.0
+    depends_on:
+      - redis
+    environment:
+      - FLASK_APP=web.py
+      - REDIS_URL=redis://redis:6379/0
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./python_app:/app
+  redis:
+    image: redis:3.0-alpine
