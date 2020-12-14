@@ -21,3 +21,33 @@ O ambiente de desenvolvimento pode ser criado, utilizando Docker e Docker Compos
     make up
 
 Note que há dependências entre os containers e seus endereços e portas são informados através de variáveis de ambiente.
+
+## Instruções importantes:
+Este teste é confidencial, portanto não é autorizada a exibição ou envio por nenhum meio, quão menos sua divulgação através de repositórios públicos. Também não é permitido pedir ajuda ou compartilhar com terceiros.
+Você terá 7 dias para fazer o case.
+
+### CASE:
+Automatize a criação de um ambiente na AWS com as seguintes especificações:
+- O ambiente deve servir uma aplicação Python e uma aplicação PHP;
+- As aplicações devem responder numa URL pública;
+- A aplicação PHP pode ter sua saúde testada no path /ping;
+- A aplicação Python pode ter sua saúde testada no path /ping;
+- As aplicações de exemplo devem ser clonadas deste próprio [repositório git][https://github.com/meliuz/devops-apps], sendo que ambas possuem dependências para funcionar;
+- A aplicação php possui um arquivo .htaccess para funcionar como esperado;
+- Na aplicação PHP, é necessário configurar uma variável de ambiente “PYTHON_APP_ADDRESS” com a URL pública da aplicação Python (pode ser o IP de um EC2 ou qualquer outro endereço publicamente acessível, onde a aplicação esteja sendo servida);
+- A automação deverá realizar o deploy das aplicações disponíveis de forma automática;
+- O ambiente deve ser seguro a ataques externos (o mais seguro que você conseguir sem indisponibilizar as aplicações);
+- As aplicações devem estar configuradas para um scale up de uma máquina quando o grupo atingir mais de 70% do CPU por mais de 5 minutos;
+- As aplicações devem estar configuradas para um scale down de uma máquina quando o grupo atingir menos de 30% de CPU por mais de 5 minutos;
+- O ambiente deve ser hospedado no Brasil e pode usar as zonas 1a e 1c;
+Ao acessar o path /ping da aplicação PHP, o resultado esperado é um retorno 200 com o seguinte output:
+- IP da API: xxx.xxx.xxx.xxx IP da aplicação: xxx.xxx.xxx.xxx;
+- Criar um script para apagar o ambiente proposto de forma automática;
+
+Você pode criar a automação da melhor forma que entender (script bash, terraform, ansible etc.), desde que inclua um passo-a-passo do que devemos fazer para montar o ambiente em nossa conta e que funcione em Linux (pois seu ambiente de trabalho no Méliuz usará Linux).
+
+**IMPORTANTE:** Você também deve criar um arquivo `Makefile` com os comandos de execução e um `README.md` explicando como executar esse processo de automação criado, além de comentários sobre este teste e como você tomou as decisões para resolve-lo.
+Iremos avaliar a adequação à solução proposta, nível de automação do processo e facilidade de reprodutibilidade do ambiente proposto.
+
+Você deve criar um repositório privado no  https://github.com e compartilhar com o usuário `patrick-t-almeida` e `marcelma`.
+Lembre-se de não deixar as credenciais de sua conta nos arquivos do repositório.
