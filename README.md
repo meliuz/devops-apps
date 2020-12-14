@@ -32,7 +32,7 @@ Automatize a criação de um ambiente na AWS com as seguintes especificações:
 - As aplicações devem responder numa URL pública;
 - A aplicação PHP pode ter sua saúde testada no path /ping;
 - A aplicação Python pode ter sua saúde testada no path /ping;
-- As aplicações de exemplo devem ser clonadas deste próprio [repositório git][https://github.com/meliuz/devops-apps], sendo que ambas possuem dependências para funcionar;
+- As aplicações de exemplo devem ser clonadas deste próprio [repositório git](https://github.com/meliuz/devops-apps), sendo que ambas possuem dependências para funcionar;
 - A aplicação php possui um arquivo .htaccess para funcionar como esperado;
 - Na aplicação PHP é necessário configurar uma variável de ambiente “PYTHON_APP_ADDRESS” com a URL pública da aplicação Python (o IP de um AWS EC2 ou qualquer outro endereço publicamente acessível, onde a aplicação esteja sendo servida);
 - A automação deverá realizar o deploy das aplicações disponíveis de forma automática;
@@ -50,5 +50,5 @@ Você pode criar a automação da melhor forma que entender (script bash, terraf
 
 Iremos avaliar a adequação à solução proposta, nível de automação do processo, decisões de projeto e segurança além de facilidade de reprodutibilidade do ambiente proposto.
 
-Você deve criar um repositório privado no  https://github.com e compartilhar com o usuário `patrick-t-almeida`, `anderson-pimentel` e `marcelma`.
+Você deve criar um repositório privado no [Github](https://github.com) e compartilhar com o usuário `patrick-t-almeida`, `anderson-pimentel` e `marcelma`.
 Lembre-se de não deixar as credenciais de sua conta nos arquivos do repositório.
