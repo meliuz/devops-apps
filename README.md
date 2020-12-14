@@ -34,7 +34,7 @@ Automatize a criação de um ambiente na AWS com as seguintes especificações:
 - A aplicação Python pode ter sua saúde testada no path /ping;
 - As aplicações de exemplo devem ser clonadas deste próprio [repositório git][https://github.com/meliuz/devops-apps], sendo que ambas possuem dependências para funcionar;
 - A aplicação php possui um arquivo .htaccess para funcionar como esperado;
-- Na aplicação PHP, é necessário configurar uma variável de ambiente “PYTHON_APP_ADDRESS” com a URL pública da aplicação Python (pode ser o IP de um EC2 ou qualquer outro endereço publicamente acessível, onde a aplicação esteja sendo servida);
+- Na aplicação PHP é necessário configurar uma variável de ambiente “PYTHON_APP_ADDRESS” com a URL pública da aplicação Python (o IP de um AWS EC2 ou qualquer outro endereço publicamente acessível, onde a aplicação esteja sendo servida);
 - A automação deverá realizar o deploy das aplicações disponíveis de forma automática;
 - O ambiente deve ser seguro a ataques externos (o mais seguro que você conseguir sem indisponibilizar as aplicações);
 - As aplicações devem estar configuradas para um scale up de uma máquina quando o grupo atingir mais de 70% do CPU por mais de 5 minutos;
@@ -47,7 +47,8 @@ Ao acessar o path /ping da aplicação PHP, o resultado esperado é um retorno 2
 Você pode criar a automação da melhor forma que entender (script bash, terraform, ansible etc.), desde que inclua um passo-a-passo do que devemos fazer para montar o ambiente em nossa conta e que funcione em Linux (pois seu ambiente de trabalho no Méliuz usará Linux).
 
 **IMPORTANTE:** Você também deve criar um arquivo `Makefile` com os comandos de execução e um `README.md` explicando como executar esse processo de automação criado, além de comentários sobre este teste e como você tomou as decisões para resolve-lo.
-Iremos avaliar a adequação à solução proposta, nível de automação do processo e facilidade de reprodutibilidade do ambiente proposto.
 
-Você deve criar um repositório privado no  https://github.com e compartilhar com o usuário `patrick-t-almeida` e `marcelma`.
+Iremos avaliar a adequação à solução proposta, nível de automação do processo, decisões de projeto e segurança além de facilidade de reprodutibilidade do ambiente proposto.
+
+Você deve criar um repositório privado no  https://github.com e compartilhar com o usuário `patrick-t-almeida`, `anderson-pimentel` e `marcelma`.
 Lembre-se de não deixar as credenciais de sua conta nos arquivos do repositório.
