@@ -27,22 +27,22 @@ Este teste é confidencial, portanto não é autorizada a exibição ou envio po
 Você terá 7 dias para fazer o case.
 
 ### CASE:
-- Automatize a criação de um ambiente na AWS com as seguintes especificações:
+Automatize a criação de um ambiente na AWS com as seguintes especificações:
 - O ambiente deve servir uma aplicação Python e uma aplicação PHP;
 - As aplicações devem responder numa URL pública;
-- A aplicação PHP pode ter sua saúde testada no path /ping
-- A aplicação Python pode ter sua saúde testada no path /ping
-- As aplicações de exemplo devem ser clonadas desse repositório git: https://github.com/meliuz/devops-apps sendo que ambas possuem dependências para funcionar.
-- A aplicação php possui um arquivo .htaccess para funcionar como esperado.
-- Na aplicação PHP, é necessário configurar uma variável de ambiente “PYTHON_APP_ADDRESS” com a URL pública da aplicação Python (pode ser o IP de um EC2, o - hostname de um elastic beanstalk ou qualquer outro endereço publicamente acessível, onde a aplicação esteja sendo servida);
-- A automação deverá realizar o deploy das aplicações disponíveis de forma automática. 
+- A aplicação PHP pode ter sua saúde testada no path /ping;
+- A aplicação Python pode ter sua saúde testada no path /ping;
+- As aplicações de exemplo devem ser clonadas deste próprio [repositório git][https://github.com/meliuz/devops-apps], sendo que ambas possuem dependências para funcionar;
+- A aplicação php possui um arquivo .htaccess para funcionar como esperado;
+- Na aplicação PHP, é necessário configurar uma variável de ambiente “PYTHON_APP_ADDRESS” com a URL pública da aplicação Python (pode ser o IP de um EC2 ou qualquer outro endereço publicamente acessível, onde a aplicação esteja sendo servida);
+- A automação deverá realizar o deploy das aplicações disponíveis de forma automática;
 - O ambiente deve ser seguro a ataques externos (o mais seguro que você conseguir sem indisponibilizar as aplicações);
 - As aplicações devem estar configuradas para um scale up de uma máquina quando o grupo atingir mais de 70% do CPU por mais de 5 minutos;
 - As aplicações devem estar configuradas para um scale down de uma máquina quando o grupo atingir menos de 30% de CPU por mais de 5 minutos;
-- O ambiente deve ser hospedado no Brasil e pode usar as zonas 1a, 1b e 1c;
-- Ao acessar o path /ping da aplicação PHP, o resultado esperado é um retorno 200 com o seguinte output:
-- IP da API: xxx.xxx.xxx.xxx IP da aplicação: xxx.xxx.xxx.xxx
-- Criar um script para apagar o ambiente proposto de forma automática.
+- O ambiente deve ser hospedado no Brasil e pode usar as zonas 1a e 1c;
+Ao acessar o path /ping da aplicação PHP, o resultado esperado é um retorno 200 com o seguinte output:
+- IP da API: xxx.xxx.xxx.xxx IP da aplicação: xxx.xxx.xxx.xxx;
+- Criar um script para apagar o ambiente proposto de forma automática;
 
 Você pode criar a automação da melhor forma que entender (script bash, terraform, ansible etc.), desde que inclua um passo-a-passo do que devemos fazer para montar o ambiente em nossa conta e que funcione em Linux (pois seu ambiente de trabalho no Méliuz usará Linux).
 
