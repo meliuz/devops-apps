@@ -27,28 +27,28 @@ Este teste é confidencial, portanto não é autorizada a exibição ou envio po
 Você terá 7 dias para fazer o case.
 
 ### CASE:
-Automatize a criação de um ambiente cloud (AWS - prefencialmente, ou Azure ou GCP) com as seguintes especificações:
+Automatize a criação de um ambiente (prefencialmente cloud AWS, mas podendo ser implementado em Azure, GCP ou localmente com virtualbox) com as seguintes especificações:
 - O ambiente deve servir uma aplicação Python e uma aplicação PHP;
-- As aplicações devem responder numa URL pública;
+- As aplicações devem responder numa URL, caso o teste seja feito em Cloud url deve ser pública, caso privado url deve ser acessivel localmente;
 - A aplicação PHP pode ter sua saúde testada no path /ping;
 - A aplicação Python pode ter sua saúde testada no path /ping;
 - As aplicações de exemplo devem ser clonadas deste próprio [repositório git](https://github.com/meliuz/devops-apps), sendo que ambas possuem dependências para funcionar;
 - A aplicação php possui um arquivo .htaccess para funcionar como esperado;
-- Na aplicação PHP é necessário configurar uma variável de ambiente “PYTHON_APP_ADDRESS” com a URL pública da aplicação Python (o IP de uma instância ou qualquer outro endereço publicamente acessível, onde a aplicação esteja sendo servida);
+- Na aplicação PHP é necessário configurar uma variável de ambiente “PYTHON_APP_ADDRESS” com a URL pública da aplicação Python (o IP de uma instância ou qualquer outro endereço acessível, onde a aplicação esteja sendo servida);
 - A automação deverá realizar o deploy das aplicações disponíveis de forma automática;
 - O ambiente deve ser seguro a ataques externos (o mais seguro que você conseguir sem indisponibilizar as aplicações);
 - As aplicações devem estar configuradas para um scale up de uma máquina quando o grupo atingir mais de 70% do CPU por mais de 5 minutos;
 - As aplicações devem estar configuradas para um scale down de uma máquina quando o grupo atingir menos de 30% de CPU por mais de 5 minutos;
-- O ambiente deve ser hospedado no Brasil e pode usar as zonas 1a e 1c;
+- O ambiente deve ser hospedado no Brasil e pode usar as zonas 1a e 1c, caso o exercício seja feito na AWS;
 Ao acessar o path /ping da aplicação PHP, o resultado esperado é um retorno 200 com o seguinte output:
 - IP da API: xxx.xxx.xxx.xxx IP da aplicação: xxx.xxx.xxx.xxx;
 - Criar um script para apagar o ambiente proposto de forma automática;
 
-Você pode criar a automação da melhor forma que entender (script bash, terraform, ansible etc.), desde que inclua um passo-a-passo do que devemos fazer para montar o ambiente em nossa conta e que funcione em Linux (pois seu ambiente de trabalho no Méliuz usará Linux).
+Você pode criar a automação da melhor forma que entender (script bash, terraform, ansible etc.), desde que inclua um passo-a-passo do que devemos fazer para montar o ambiente e que funcione em Linux (pois seu ambiente de trabalho no Méliuz usará Linux).
 
 **IMPORTANTE:** Você também deve criar um arquivo `Makefile` com os comandos de execução e um `README.md` explicando como executar esse processo de automação criado, além de comentários sobre este teste e como você tomou as decisões para resolve-lo.
 
 Iremos avaliar a adequação à solução proposta, nível de automação do processo, decisões de projeto e segurança além de facilidade de reprodutibilidade do ambiente proposto.
 
-Você deve criar um repositório privado no [Github](https://github.com) e compartilhar com o usuário `patrick-t-almeida`, `anderson-pimentel` e `marcelma`.
+Você deve criar um repositório privado no [Github](https://github.com) e compartilhar com o usuário `pauloroberto97`, `adilson-cruz`, `anderson-pimentel` e `marcelma`.
 Lembre-se de não deixar as credenciais de sua conta nos arquivos do repositório.
