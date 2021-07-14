@@ -50,5 +50,6 @@ Você pode criar a automação da melhor forma que entender (script bash, terraf
 
 Iremos avaliar a adequação à solução proposta, nível de automação do processo, decisões de projeto e segurança além de facilidade de reprodutibilidade do ambiente proposto.
 
-Você deve criar um repositório privado no [Github](https://github.com) e compartilhar com o usuário `pauloroberto97`, `adilson-cruz`, `anderson-pimentel` e `marcelma`.
+Você deve criar um repositório privado no [Github](https://github.com) e compartilhar com o usuário [pauloroberto97](https://github.com/pauloroberto97), [adilson-cruz](https://github.com/adilson-cruz), [anderson-pids](https://github.com/anderson-pids) e [marcelma](https://github.com/marcelma).
+
 Lembre-se de não deixar as credenciais de sua conta nos arquivos do repositório.
