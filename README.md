@@ -1,4 +1,6 @@
-# Méliuz DevOps
+# Este repositório foi arquivado e o novo repositório de apps SRE foi criado: https://github.com/meliuz/challenge-sre
+
+## Méliuz DevOps
 
 Dentro deste diretório você encontrará duas aplicações: uma escrita em Python e outra em PHP.
 
